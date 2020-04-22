@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/rayri22/rayri22.github.io/static/css/main.5facb584.chunk.css",
+    "main.js": "/rayri22/rayri22.github.io/static/js/main.ac830936.chunk.js",
+    "main.js.map": "/rayri22/rayri22.github.io/static/js/main.ac830936.chunk.js.map",
+    "runtime-main.js": "/rayri22/rayri22.github.io/static/js/runtime-main.e50f2e27.js",
+    "runtime-main.js.map": "/rayri22/rayri22.github.io/static/js/runtime-main.e50f2e27.js.map",
+    "static/js/2.11d15f81.chunk.js": "/rayri22/rayri22.github.io/static/js/2.11d15f81.chunk.js",
+    "static/js/2.11d15f81.chunk.js.map": "/rayri22/rayri22.github.io/static/js/2.11d15f81.chunk.js.map",
+    "index.html": "/rayri22/rayri22.github.io/index.html",
+    "precache-manifest.65cf37fd97e5b71ec954303def03fd55.js": "/rayri22/rayri22.github.io/precache-manifest.65cf37fd97e5b71ec954303def03fd55.js",
+    "service-worker.js": "/rayri22/rayri22.github.io/service-worker.js",
+    "static/css/main.5facb584.chunk.css.map": "/rayri22/rayri22.github.io/static/css/main.5facb584.chunk.css.map",
+    "static/js/2.11d15f81.chunk.js.LICENSE.txt": "/rayri22/rayri22.github.io/static/js/2.11d15f81.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e50f2e27.js",
+    "static/js/2.11d15f81.chunk.js",
+    "static/css/main.5facb584.chunk.css",
+    "static/js/main.ac830936.chunk.js"
+  ]
+}
