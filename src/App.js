@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import Event from "./Event";
-import "./App.css";
+import InputTable from "./InputTable";
+import './index.css';
 
 function App() {
   return (
     <div className="App">
-      <Event />
+      <InputTable />
     </div>
   );
 }
