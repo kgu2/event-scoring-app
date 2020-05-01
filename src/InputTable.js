@@ -2,7 +2,7 @@ import React , { useState } from 'react';
 
 function InputTable () {
     let tableRows = []
-    const eventList = ["shot","discus","hammer","weight","javelin"]
+    //const eventList = ["shot","discus","hammer","weight","javelin"]
     const [name,changeName] = useState()
     const [event,changeEvent] = useState()
     const [finals, changeFinals] = useState(false)
@@ -21,12 +21,24 @@ function InputTable () {
     }
     function addData() {
        // let tableRows = [...tableRows]
-       if((throws === "3" || throws === "4") && !isNaN(parseInt(flight)) && (eventList.includes(event))){
+       console.log(event)
+       
+       if(typeof name === 'undefined'){
+        alert("Please enter athlete name")
+       }
+       else if(typeof event === 'undefined'){
+        alert("Please choose an event")
+       }
+       else if(typeof throws === 'undefined'){
+        alert("Please choose number of throws")
+       }
+       else if(typeof flight === 'undefined' || isNaN(parseInt(flight))){
+        alert("Please enter a valid flight number")
+       }
+       else{
         changeInfo([...info,<tr><td>{name}</td><td>{event}</td><td>{(finals? "Yes": "No")}</td><td>{throws}</td><td>{flight}</td></tr>])
        }
-       else {
-        alert("*Throws must be 3 or 4\n*Flight field must be a number\n*Must be valid event")
-       }
+       
         /*
         changeFinals(() => '' )
         changeName(() => '')
@@ -35,7 +47,7 @@ function InputTable () {
         changeThrows(() => '')
         changeFlight(() => '')
         */
-       changeInfo([...info,<tr><td>{name}</td><td>{event}</td><td>{(finals? "Yes": "No")}</td><td>{throws}</td><td>{flight}</td></tr>])
+      // changeInfo([...info,<tr><td>{name}</td><td>{event}</td><td>{(finals? "Yes": "No")}</td><td>{throws}</td><td>{flight}</td></tr>])
         console.log(parseInt(throws))
         console.log(tableRows)
     }
