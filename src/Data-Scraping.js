@@ -33,4 +33,6 @@ const writeToFile = (data) =>{
 
 
 
-module.exports.PefromanceList = getPerformanceList();
+exports.performance_list = function(){
+    return getPerformanceList();
+};
