@@ -8,11 +8,11 @@
   }
 
 table {
-  border-collapse: collapse;
+    border-collapse: collapse;
   }
 
 table, th, td {
-  border: 1px solid black;
+    border: 1px solid white;
   }
 
 th, td {
@@ -26,4 +26,4 @@ body {
     padding: 40px;
     font-family: Arial;
     text-align: center;
-}
+  }
