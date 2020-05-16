@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/event-scoring-app/static/css/main.3e398366.chunk.css",
+    "main.css": "/event-scoring-app/static/css/main.c8410660.chunk.css",
     "main.js": "/event-scoring-app/static/js/main.18680488.chunk.js",
     "main.js.map": "/event-scoring-app/static/js/main.18680488.chunk.js.map",
     "runtime-main.js": "/event-scoring-app/static/js/runtime-main.f195eb08.js",
@@ -8,15 +8,15 @@
     "static/js/2.cbfdce78.chunk.js": "/event-scoring-app/static/js/2.cbfdce78.chunk.js",
     "static/js/2.cbfdce78.chunk.js.map": "/event-scoring-app/static/js/2.cbfdce78.chunk.js.map",
     "index.html": "/event-scoring-app/index.html",
-    "precache-manifest.1642630a200fb4881ed0312e2ef88104.js": "/event-scoring-app/precache-manifest.1642630a200fb4881ed0312e2ef88104.js",
+    "precache-manifest.1bb488600d8fb2bb8b07305574df3885.js": "/event-scoring-app/precache-manifest.1bb488600d8fb2bb8b07305574df3885.js",
     "service-worker.js": "/event-scoring-app/service-worker.js",
-    "static/css/main.3e398366.chunk.css.map": "/event-scoring-app/static/css/main.3e398366.chunk.css.map",
+    "static/css/main.c8410660.chunk.css.map": "/event-scoring-app/static/css/main.c8410660.chunk.css.map",
     "static/js/2.cbfdce78.chunk.js.LICENSE.txt": "/event-scoring-app/static/js/2.cbfdce78.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f195eb08.js",
     "static/js/2.cbfdce78.chunk.js",
-    "static/css/main.3e398366.chunk.css",
+    "static/css/main.c8410660.chunk.css",
     "static/js/main.18680488.chunk.js"
   ]
 }

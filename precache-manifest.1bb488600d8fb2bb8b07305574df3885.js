@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b2b9fa323c4ff6ba88d79c8407382ed5",
+    "revision": "a645430160f345edb92d5bd8cbef5321",
     "url": "/event-scoring-app/index.html"
   },
   {
-    "revision": "e37943aefeee1c6630db",
-    "url": "/event-scoring-app/static/css/main.3e398366.chunk.css"
+    "revision": "b73b90082b84820ef1ec",
+    "url": "/event-scoring-app/static/css/main.c8410660.chunk.css"
   },
   {
     "revision": "ac63089d796b4be9cdc7",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/event-scoring-app/static/js/2.cbfdce78.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e37943aefeee1c6630db",
+    "revision": "b73b90082b84820ef1ec",
     "url": "/event-scoring-app/static/js/main.18680488.chunk.js"
   },
   {
