@@ -34,4 +34,9 @@ label {
 
 input[type=text]:focus {
   border: 3px solid Violet;
-}
+  }
+
+h4 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
