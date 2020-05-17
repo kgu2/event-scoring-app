@@ -27,3 +27,11 @@ body {
     font-family: Arial;
     text-align: center;
   }
+
+label {
+    text-align: left;
+  }
+
+input[type=text]:focus {
+  border: 3px solid Violet;
+}
