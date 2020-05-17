@@ -55,9 +55,9 @@ function InputTable () {
     <div>
         <form className="container">
             <div>
-                Athlete: <input  value = {name} id = "name" onChange = {handleInput} placeholder = "Name"/>
+                <h4>Athlete:<h4 /> <input  value = {name} id = "name" onChange = {handleInput} placeholder = "Name"/>
                 <br />
-                <label>Choose Event Type:</label>
+                <h4>Choose Event Type:<h4/>
                 <select id= "event" onChange = {handleInput}>
                         <option value="" disabled selected>Select Event Type</option>
                         <option value="shot">Shot</option>
@@ -67,16 +67,16 @@ function InputTable () {
                         <option value="javelin">Javelin</option>
                     </select>
                 <br />
-                <label>Number of Throws</label> <br/>
+                <h4>Number of Throws<h4/> <br/>
                 <div>
-                    3: <input type="radio" id="throws" name="throws" value="3" onChange={handleInput}/>
-                    4: <input type="radio" id="throws" name="throws" value="4" onChange={handleInput}/>
+                    <label>3: <input type="radio" id="throws" name="throws" value="3" onChange={handleInput}/></label>
+                    <label>4: <input type="radio" id="throws" name="throws" value="4" onChange={handleInput}/></label>
                     {/*   Throws: <input   value = {throws} id = "throws" onChange = {handleInput} placeholder= "Number of Throws"/> */}
                 </div>
                 <br />
-                Flight:<input  value = {flight} id = "flight" onChange = {handleInput} placeholder= "Flight Number" /> 
+                <h4>Flight:<h4/><input  value = {flight} id = "flight" onChange = {handleInput} placeholder= "Flight Number" /> 
                 <br />
-                Finals: <input type = "checkbox" value = {finals} id = "finals"  checked = {finals} onChange = {handleInput} /> 
+                <label style="font-weight:bold"> Finals: <input type = "checkbox" value = {finals} id = "finals"  checked = {finals} onChange = {handleInput} /> <label/>
                 <br />
                 <button type = "button" onClick={addData}>Submit</button>
             </div>
