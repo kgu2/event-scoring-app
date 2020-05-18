@@ -12,6 +12,7 @@ function InputTable () {
     const [distance, changeDistance] = useState()//for feet/meters
     const [distanceTwo, changeDistanceTwo] = useState()//for inches/centimeters
     const [englishMetric,changeEnglishMetric] = useState("metric")
+    const [scratch,changeScratch] = useState(false)
     
     /*
     function eventScore(value,event){
@@ -38,7 +39,8 @@ function InputTable () {
     }
     function handleInput(event){
         const {type,id,value} = event.target
-        if(type === "checkbox"){ changeFinals(prevState => !prevState )}
+        if(type === "checkbox" && id === "scratch"){ changeScratch(prevState => !prevState )}
+        else if(type === "checkbox"){ changeFinals(prevState => !prevState )}
         else  if(id === "name") {changeName(() => value)}
         else  if(id === "event") {changeEvent(() => value)}
         else  if(id === "finals") {changeFinals(() => value)}
@@ -70,12 +72,15 @@ function InputTable () {
        else if(typeof flight === 'undefined' || isNumber(flight)){
         alert("Please enter a valid flight number")
        }
-       else if(typeof distance === 'undefined' ||( isNumber(distance)&&(distance!=='S'))){
+       else if((typeof distance === 'undefined' ||( isNumber(distance))) && scratch!==true){
+        alert("Please enter a valid distance")
+       }
+       else if((typeof distanceTwo === 'undefined' || isNumber(distanceTwo)) && scratch!==true){
         alert("Please enter a valid distance")
        }
        else{
-        let newDistance = 0//eventScore(distance,event)
-        changeInfo([...info,<tr><td>{name}</td><td>{event}</td><td>{(finals? "Yes": "No")}</td><td>{throws}</td><td>{flight}</td><td>{distance + "-" + distanceTwo + (englishMetric === "english" ? " Feet-Inches" : "m.cm")}</td></tr>])
+       
+        changeInfo([...info,<tr><td>{name}</td><td>{event}</td><td>{(finals? "Yes": "No")}</td><td>{throws}</td><td>{flight}</td><td>{(scratch!==true)? (distance + "-" + distanceTwo + (englishMetric === "english" ? " Feet-Inches" : "m.cm")):'S'}</td></tr>])
        }
       // console.log(isNumber(flight))
         /*
@@ -115,16 +120,22 @@ function InputTable () {
                 <br />
                 Flight:<input  value = {flight} id = "flight" onChange = {handleInput} placeholder= "Flight Number" /> 
                 <br />
-                <div>
-                    english: <input type="radio" id="englishmetric" name="englishmetric" value= "english" onChange={handleInput}/>
-                    metric: <input type="radio" id="englishmetric" name="englishmetric" value="metric" onChange={handleInput}/>
-                    {/*   Throws: <input   value = {throws} id = "throws" onChange = {handleInput} placeholder= "Number of Throws"/> */}
-                </div>
+                Scratch: <input type = "checkbox" value = {scratch} id = "scratch"  checked = {scratch} onChange = {handleInput} /> 
                 <br />
-                {(englishMetric === "english" ? "Feet" : "Meters")}:<input   value = {distance} id = "distance" onChange = {handleInput} /> 
-                <br />
-                {(englishMetric === "english" ? "Inches" : "Centimeters")}:<input   value = {distanceTwo} id = "distanceTwo" onChange = {handleInput} /> 
-                <br />
+                {
+                    (scratch!==true) ? (<div>
+                                english: <input type="radio" id="englishmetric" name="englishmetric" value= "english" onChange={handleInput}/>
+                                metric: <input type="radio" id="englishmetric" name="englishmetric" value="metric" onChange={handleInput}/>
+                                <br />
+                                {(englishMetric === "english" ? "Feet" : "Meters")}:<input   value = {distance} id = "distance" onChange = {handleInput} /> 
+                                <br />
+                                {(englishMetric === "english" ? "Inches" : "Centimeters")}:<input   value = {distanceTwo} id = "distanceTwo" onChange = {handleInput} /> 
+                                <br />
+                                
+                            </div> ) : null
+                    }
+                    
+               
                 Finals: <input type = "checkbox" value = {finals} id = "finals"  checked = {finals} onChange = {handleInput} /> 
                 <br />
                 <button type = "button" onClick={addData}>Submit</button>
